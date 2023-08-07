@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using scratch_shop_app.Models;
-using scratch_shop_app.ViewModel;
+using learning_aspdotnet.Models;
+using learning_aspdotnet.ViewModel;
 
-namespace scratch_shop_app.Controllers
+namespace learning_aspdotnet.Controllers
 { 
     public class PieController : Controller
     {
@@ -18,7 +18,7 @@ namespace scratch_shop_app.Controllers
         {
             //ViewBag.CurrentCategory = "Cheese Cake";
             //return View(_pieRepository.AllPies);
-            PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese cakes");
+            PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese cakes"); 
             return View(piesListViewModel);
         }
     }

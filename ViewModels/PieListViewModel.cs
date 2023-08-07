@@ -1,6 +1,6 @@
-﻿using scratch_shop_app.Models;
+﻿using learning_aspdotnet.Models;
 
-namespace scratch_shop_app.ViewModel
+namespace learning_aspdotnet.ViewModel
 {
     public class PieListViewModel
     {

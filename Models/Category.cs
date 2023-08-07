@@ -1,4 +1,4 @@
-﻿namespace scratch_shop_app.Models
+﻿namespace learning_aspdotnet.Models
 {
     public class Category
     {
