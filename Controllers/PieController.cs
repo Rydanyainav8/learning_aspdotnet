@@ -18,8 +18,16 @@ namespace learning_aspdotnet.Controllers
         {
             //ViewBag.CurrentCategory = "Cheese Cake";
             //return View(_pieRepository.AllPies);
-            PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese cakes"); 
+            PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "All pies"); 
             return View(piesListViewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var pie = _pieRepository.GetPieById(id);
+            if(pie == null)
+                return NotFound();
+            return View(pie);
         }
     }
 }

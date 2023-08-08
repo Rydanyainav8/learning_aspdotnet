@@ -21,6 +21,12 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+//"{controller=Home/{action=Index}/{id}
 app.MapDefaultControllerRoute();
-DbInitializer.Seed(app);
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}"
+//);
+
+DbInitializer.Seed(app);   
 app.Run();
