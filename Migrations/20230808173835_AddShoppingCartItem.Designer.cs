@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using learning_aspdotnet.Models;
 
@@ -10,9 +11,11 @@ using learning_aspdotnet.Models;
 namespace learning_aspdotnet.Migrations
 {
     [DbContext(typeof(ScratchShopAppDbContext))]
-    partial class ScratchShopAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230808173835_AddShoppingCartItem")]
+    partial class AddShoppingCartItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
