@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using learning_aspdotnet.Models;
 
@@ -11,9 +12,11 @@ using learning_aspdotnet.Models;
 namespace learning_aspdotnet.Migrations
 {
     [DbContext(typeof(ScratchShopAppDbContext))]
-    partial class ScratchShopAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230810132916_AddingOrder")]
+    partial class AddingOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,10 +85,6 @@ namespace learning_aspdotnet.Migrations
 
                     b.Property<decimal>("OrderTotal")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
