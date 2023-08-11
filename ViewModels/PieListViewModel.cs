@@ -12,7 +12,6 @@ namespace learning_aspdotnet.ViewModel
         {
             Pies = pies;
             CurrentCategory = currentCategory;
-        }       
+        }
     }
 }
-  

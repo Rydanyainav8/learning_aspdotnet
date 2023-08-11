@@ -4,7 +4,7 @@ namespace learning_aspdotnet.TagHelpers
 {
     public class EmailTagHelper : TagHelper
     {
-        public string? Address { get; set; }    
+        public string? Address { get; set; }
 
         public string? Content { get; set; }
 

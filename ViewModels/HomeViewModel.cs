@@ -6,9 +6,9 @@ namespace learning_aspdotnet.ViewModels
     {
         public IEnumerable<Pie> PiesOfTheWeek { get; }
 
-        public HomeViewModel(IEnumerable<Pie> piesOfTheWeek) 
+        public HomeViewModel(IEnumerable<Pie> piesOfTheWeek)
         {
             PiesOfTheWeek = piesOfTheWeek;
-        }  
+        }
     }
 }

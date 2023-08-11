@@ -10,7 +10,7 @@ namespace learning_aspdotnet.Components
         public CategoryMenu(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
-        }   
+        }
         public IViewComponentResult Invoke()
         {
             var categories = _categoryRepository.AllCategories.OrderBy(c => c.CategoryName);

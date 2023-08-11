@@ -20,17 +20,17 @@ namespace learning_aspdotnet.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Checkout(Order order) 
+        public IActionResult Checkout(Order order)
         {
             var items = _shoppingCart.GetShoppingCartItems();
             _shoppingCart.ShoppingCartItems = items;
 
-            if(_shoppingCart.ShoppingCartItems.Count == 0)
+            if (_shoppingCart.ShoppingCartItems.Count == 0)
             {
                 ModelState.AddModelError("", "Your cart is empty, add some pies firts");
             }
-            if(ModelState.IsValid)
-             {
+            if (ModelState.IsValid)
+            {
                 _orderRepository.CreateOrder(order);
                 _shoppingCart.ClearCart();
                 return RedirectToAction("CheckoutComplete");
@@ -39,10 +39,10 @@ namespace learning_aspdotnet.Controllers
             return View(order);
         }
 
-        public IActionResult CheckoutComplete() 
+        public IActionResult CheckoutComplete()
         {
             ViewBag.CheckoutCompleteMessage = "Thanks for your order. You'll soon enjoy our delicious pies!";
-            return View(); 
+            return View();
         }
     }
 }

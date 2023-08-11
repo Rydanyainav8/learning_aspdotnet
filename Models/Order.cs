@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
 
 namespace learning_aspdotnet.Models
 {
@@ -26,7 +25,7 @@ namespace learning_aspdotnet.Models
         public string AddressLine1 { get; set; } = string.Empty;
 
         [Display(Name = "Address Line 2")]
-        public string? AddressLine2 { get; set;}
+        public string? AddressLine2 { get; set; }
 
         [Required(ErrorMessage = "Please enter your zip code")]
         [Display(Name = "Zip Code")]
@@ -48,7 +47,7 @@ namespace learning_aspdotnet.Models
         [StringLength(25)]
         [DataType(DataType.PhoneNumber)]
         [Display(Name = "Phone number")]
-        public string PhoneNumber { get; set ; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
 
         [Required]
         [StringLength(50)]

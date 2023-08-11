@@ -29,7 +29,7 @@ namespace learning_aspdotnet.Controllers
         public RedirectToActionResult AddToShoppingCart(int pieId)
         {
             var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == pieId);
-            if(selectedPie != null) 
+            if (selectedPie != null)
             {
                 _shoppingCart.AddToCart(selectedPie);
             }
@@ -40,7 +40,7 @@ namespace learning_aspdotnet.Controllers
         {
             var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == pieId);
 
-            if(selectedPie != null)
+            if (selectedPie != null)
             {
                 _shoppingCart.RemoveFromCart(selectedPie);
             }

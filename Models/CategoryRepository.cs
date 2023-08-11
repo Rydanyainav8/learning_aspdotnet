@@ -1,6 +1,6 @@
 ﻿namespace learning_aspdotnet.Models
 {
-    public class CategoryRepository: ICategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         private readonly ScratchShopAppDbContext _scratchShopAppDbContext;
 

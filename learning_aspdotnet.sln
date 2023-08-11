@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "learning_aspdotnet", "learning_aspdotnet.csproj", "{E368E797-CE85-4382-AEB6-492E7997A221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning_aspdotnet", "learning_aspdotnet.csproj", "{E368E797-CE85-4382-AEB6-492E7997A221}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

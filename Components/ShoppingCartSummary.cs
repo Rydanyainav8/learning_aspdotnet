@@ -19,7 +19,7 @@ namespace learning_aspdotnet.Components
             _shoppingCart.ShoppingCartItems = items;
 
             var shoppingCartViewModel = new ShoppingCartViewModel(_shoppingCart, _shoppingCart.GetShoppingCartTotal());
-            return View(shoppingCartViewModel); 
-        }  
+            return View(shoppingCartViewModel);
+        }
     }
 }

@@ -12,7 +12,8 @@ namespace learning_aspdotnet.Models
         }
 
         public IEnumerable<Pie> AllPies
-        { get 
+        {
+            get
             {
                 return _scratchShopAppDbContext.Pies.Include(c => c.Category);
             }

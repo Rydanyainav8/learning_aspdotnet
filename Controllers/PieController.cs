@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using learning_aspdotnet.Models;
+﻿using learning_aspdotnet.Models;
 using learning_aspdotnet.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 
 namespace learning_aspdotnet.Controllers
-{ 
+{
     public class PieController : Controller
     {
         private readonly IPieRepository _pieRepository;
@@ -13,12 +13,12 @@ namespace learning_aspdotnet.Controllers
         {
             _pieRepository = ieRepository;
             _categoryRepository = categoryRepository;
-        }   
-        public ViewResult List(string category) 
+        }
+        public ViewResult List(string category)
         {
             IEnumerable<Pie> pies;
             string? currentCategory;
-            if(string.IsNullOrEmpty(category))
+            if (string.IsNullOrEmpty(category))
             {
                 pies = _pieRepository.AllPies.OrderBy(p => p.PieId);
                 currentCategory = "All pies";
@@ -35,7 +35,7 @@ namespace learning_aspdotnet.Controllers
         public IActionResult Details(int id)
         {
             var pie = _pieRepository.GetPieById(id);
-            if(pie == null)
+            if (pie == null)
                 return NotFound();
             return View(pie);
         }

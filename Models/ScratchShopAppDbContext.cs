@@ -2,11 +2,11 @@
 
 namespace learning_aspdotnet.Models
 {
-    public class ScratchShopAppDbContext: DbContext
+    public class ScratchShopAppDbContext : DbContext
     {
-        public ScratchShopAppDbContext(DbContextOptions<ScratchShopAppDbContext>options) : base(options)
+        public ScratchShopAppDbContext(DbContextOptions<ScratchShopAppDbContext> options) : base(options)
         {
-        
+
         }
 
         public DbSet<Category> Categories { get; set; }
@@ -19,5 +19,5 @@ namespace learning_aspdotnet.Models
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
-    }  
+    }
 }

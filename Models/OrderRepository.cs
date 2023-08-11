@@ -20,7 +20,7 @@
             order.OrderDetails = new List<OrderDetail>();
 
             //ajout de commande avec leur details
-            foreach (ShoppingCartItem? shoppingCartItem in shoppingCartItems) 
+            foreach (ShoppingCartItem? shoppingCartItem in shoppingCartItems)
             {
                 var orderDetail = new OrderDetail
                 {
