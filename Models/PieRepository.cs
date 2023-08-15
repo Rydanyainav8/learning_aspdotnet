@@ -30,5 +30,10 @@ namespace learning_aspdotnet.Models
         {
             return _scratchShopAppDbContext.Pies.FirstOrDefault(p => p.PieId == pieId);
         }
+
+        public IEnumerable<Pie> SearchPies(string searchQuery)
+        {
+            return _scratchShopAppDbContext.Pies.Where(p => p.Name.Contains(searchQuery));
+        }
     }
 }

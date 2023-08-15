@@ -4,7 +4,7 @@
     public class MockPieRepository : IPieRepository
     {
         private readonly ICategoryRepository _categoryRepository = new MockCategoryRepository();
-
+         
         public IEnumerable<Pie> AllPies =>
             new List<Pie>
             {
@@ -17,6 +17,11 @@
         public IEnumerable<Pie> PiesOfTheWeek => throw new NotImplementedException();
 
         public Pie? GetPieById(int pieid)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pie> SearchPies(string searchQuery)
         {
             throw new NotImplementedException();
         }
