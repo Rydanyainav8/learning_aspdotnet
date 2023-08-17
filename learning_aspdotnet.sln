@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning_aspdotnet", "learning_aspdotnet.csproj", "{E368E797-CE85-4382-AEB6-492E7997A221}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "learning_aspdtonet_test", "..\learning_aspdtonet_test\learning_aspdtonet_test.csproj", "{672B75D9-AC4E-4AE0-B2AC-A6DAD90F34FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning_aspdtonet_test", "..\learning_aspdtonet_test\learning_aspdtonet_test.csproj", "{672B75D9-AC4E-4AE0-B2AC-A6DAD90F34FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,11 @@
 ﻿using learning_aspdotnet.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace learning_aspdotnet.Controllers
 {
+    //we need to be authorization to access
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;

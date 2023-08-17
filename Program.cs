@@ -1,8 +1,10 @@
 using learning_aspdotnet.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("ScratchShopAppDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ScratchShopAppDbContextConnection' not found.");
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
@@ -26,11 +28,18 @@ builder.Services.AddDbContext<ScratchShopAppDbContext>(options =>
         builder.Configuration["ConnectionStrings:ScratchShopAppDbContextConnection"]);
 });
 
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ScratchShopAppDbContext>();
+
+//for blazor dynamic UI
+builder.Services.AddServerSideBlazor();
 
 var app = builder.Build();
 
 app.UseStaticFiles();
 app.UseSession();
+app.UseAuthentication();
+app.UseAuthorization();
 
 if (app.Environment.IsDevelopment())
 {
@@ -47,6 +56,9 @@ app.MapRazorPages();
 
 //routing api
 app.MapControllers();
+
+app.MapBlazorHub();
+app.MapFallbackToPage("/app/{*catchall}", "/App/Index");
 
 DbInitializer.Seed(app);
 app.Run();

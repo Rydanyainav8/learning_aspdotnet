@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace learning_aspdotnet.Models
 {
-    public class ScratchShopAppDbContext : DbContext
+    public class ScratchShopAppDbContext : IdentityDbContext
     {
         public ScratchShopAppDbContext(DbContextOptions<ScratchShopAppDbContext> options) : base(options)
         {
